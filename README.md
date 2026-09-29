@@ -46,9 +46,16 @@ Run only the stable tests:
 npm run test:stable
 ```
 
+The Session 5 flaky tests are excluded from `npm test`. Run them on purpose:
+
+```bash
+npm run test:flaky        # once, in random order
+npm run test:repeat -- 10 # 10 times, with a per-test failure tally
+```
+
 ## Demo Scenarios
 
-| Folder | Session 2 use |
+| Folder | Use |
 | --- | --- |
 | `demo-scenarios/order-service-bug/` | ChatGPT diagnosis and bug-report exercise |
 | `demo-scenarios/flaky-checkout-test/` | Parallel assistant debugging exercise |
@@ -57,6 +64,8 @@ npm run test:stable
 | `demo-scenarios/duplicate-bug-triage/` | 3-tool group exercise fallback, track A (no code needed) |
 | `demo-scenarios/test-summary-notes/` | Optional bonus scenario — not part of the main 2-track exercise, kept for reuse |
 | `demo-scenarios/session-3-fallback-pakk/` | Session 3 fallback material (Gemini Notebook / Atlassian AI / Projects exercises) — spec, test plan, bug report, API description, sample Jira tickets |
+| `demo-scenarios/session-4-restful-booker/` | Session 4 (manual testing with AI) — Restful-booker requirements, test data, reports, PR diff, prompts |
+| `demo-scenarios/session-5-agendid/` | Session 5 (test automation and coding agents) — setup for Claude Code / Codex / Copilot, prompts, CI log, local-model exercise. Code: `src/booking/`, flaky tests: `tests/flaky/` |
 
 ## Browser-Only Exercise Path
 

@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node src/server.js",
     "test": "jest --watchman=false",
-    "test:stable": "jest --watchman=false --testPathIgnorePatterns=checkoutFlow.test.js"
+    "test:stable": "jest --watchman=false --testPathIgnorePatterns=checkoutFlow.test.js --testPathIgnorePatterns=/tests/flaky/",
+    "test:flaky": "jest tests/flaky --watchman=false --randomize --testPathIgnorePatterns=/node_modules/",
+    "test:repeat": "node scripts/run-repeat.js"
   },
   "keywords": [
     "training",
@@ -25,6 +27,10 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "clearMocks": true
+    "clearMocks": true,
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/flaky/"
+    ]
   }
 }

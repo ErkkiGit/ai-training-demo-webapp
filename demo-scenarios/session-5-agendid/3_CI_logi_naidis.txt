@@ -1,0 +1,99 @@
+# GitHub Actions log — workflow "tests", PR #14 "Hinnamoodul: püsikliendi soodustus", attempt 1
+# (Näidislogi Harjutus 3 jaoks. Päris logi saate oma forgi Actions vahekaardilt.)
+2026-10-12T08:13:41.1022310Z ##[group]Run actions/checkout@v4
+2026-10-12T08:13:42.0034120Z ##[endgroup]
+2026-10-12T08:13:42.2210040Z ##[group]Run actions/setup-node@v4
+2026-10-12T08:13:42.2213350Z with:
+2026-10-12T08:13:42.2213901Z   node-version: 24
+2026-10-12T08:13:44.8820170Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+2026-10-12T08:13:44.9031250Z ##[endgroup]
+2026-10-12T08:13:45.0011820Z ##[group]Run npm ci
+2026-10-12T08:13:52.4410330Z added 296 packages, and audited 297 packages in 7s
+2026-10-12T08:13:52.4502010Z found 0 vulnerabilities
+2026-10-12T08:13:52.4610140Z ##[endgroup]
+2026-10-12T08:13:52.5120330Z ##[group]Run npm test
+2026-10-12T08:13:52.6900110Z > ai-training-demo-webapp@1.0.0 test
+2026-10-12T08:13:52.6900980Z > jest --watchman=false
+2026-10-12T08:13:53.9120020Z PASS tests/productRepository.test.js
+2026-10-12T08:13:53.9480110Z PASS tests/orderService.test.js
+2026-10-12T08:13:54.0610220Z PASS tests/checkoutSimulator.test.js
+2026-10-12T08:13:54.2210330Z PASS tests/app.test.js
+2026-10-12T08:13:54.5130150Z PASS tests/checkoutFlow.test.js
+2026-10-12T08:13:54.6003000Z FAIL tests/booking/priceCalculator.test.js
+2026-10-12T08:13:54.6006000Z   calculatePrice
+2026-10-12T08:13:54.6009000Z     ✓ 3.1 two weekday nights cost 2 x nightly rate (1 ms)
+2026-10-12T08:13:54.6012000Z     ✕ 3.2 Saturday and Sunday nights are 20% more expensive (1 ms)
+2026-10-12T08:13:54.6015000Z     ✕ 7.1 regular guest can book 30 nights
+2026-10-12T08:13:54.6018000Z   cancellationFee
+2026-10-12T08:13:54.6021000Z     ✕ 5.1 cancelling exactly 48 hours before check-in is free (4 ms)
+2026-10-12T08:13:54.6024000Z 
+2026-10-12T08:13:54.6027000Z   ● calculatePrice › 3.2 Saturday and Sunday nights are 20% more expensive
+2026-10-12T08:13:54.6030000Z 
+2026-10-12T08:13:54.6033000Z     expect(received).toBe(expected) // Object.is equality
+2026-10-12T08:13:54.6036000Z 
+2026-10-12T08:13:54.6039000Z     Expected: 24000
+2026-10-12T08:13:54.6042000Z     Received: 22000
+2026-10-12T08:13:54.6045000Z 
+2026-10-12T08:13:54.6048000Z       12 |
+2026-10-12T08:13:54.6051000Z       13 |   test('3.2 Saturday and Sunday nights are 20% more expensive', () => {
+2026-10-12T08:13:54.6054000Z     > 14 |     expect(price('2026-10-10', '2026-10-12').totalCents).toBe(24000);
+2026-10-12T08:13:54.6057000Z          |                                                          ^
+2026-10-12T08:13:54.6060000Z       15 |   });
+2026-10-12T08:13:54.6063000Z       16 |
+2026-10-12T08:13:54.6066000Z       17 |   test('7.1 regular guest can book 30 nights', () => {
+2026-10-12T08:13:54.6069000Z 
+2026-10-12T08:13:54.6072000Z       at Object.toBe (tests/booking/priceCalculator.test.js:14:58)
+2026-10-12T08:13:54.6075000Z 
+2026-10-12T08:13:54.6078000Z   ● calculatePrice › 7.1 regular guest can book 30 nights
+2026-10-12T08:13:54.6081000Z 
+2026-10-12T08:13:54.6084000Z     Stay too long: 30 nights (max 14)
+2026-10-12T08:13:54.6087000Z 
+2026-10-12T08:13:54.6090000Z       27 |   const maxNights = options.regular ? MAX_NIGHTS_REGULAR : MAX_NIGHTS;
+2026-10-12T08:13:54.6093000Z       28 |   if (nights > maxNights) {
+2026-10-12T08:13:54.6096000Z     > 29 |     throw new Error(`Stay too long: ${nights} nights (max ${maxNights})`);
+2026-10-12T08:13:54.6099000Z          |           ^
+2026-10-12T08:13:54.6102000Z       30 |   }
+2026-10-12T08:13:54.6105000Z       31 | }
+2026-10-12T08:13:54.6108000Z       32 |
+2026-10-12T08:13:54.6111000Z 
+2026-10-12T08:13:54.6114000Z       at validateStay (src/booking/priceCalculator.js:29:11)
+2026-10-12T08:13:54.6117000Z       at validateStay (src/booking/priceCalculator.js:36:3)
+2026-10-12T08:13:54.6120000Z       at calculatePrice (tests/booking/priceCalculator.test.js:6:3)
+2026-10-12T08:13:54.6123000Z       at Object.price (tests/booking/priceCalculator.test.js:18:12)
+2026-10-12T08:13:54.6126000Z 
+2026-10-12T08:13:54.6129000Z   ● cancellationFee › 5.1 cancelling exactly 48 hours before check-in is free
+2026-10-12T08:13:54.6132000Z 
+2026-10-12T08:13:54.6135000Z     expect(received).toBe(expected) // Object.is equality
+2026-10-12T08:13:54.6138000Z 
+2026-10-12T08:13:54.6141000Z     Expected: 0
+2026-10-12T08:13:54.6144000Z     Received: 12000
+2026-10-12T08:13:54.6147000Z 
+2026-10-12T08:13:54.6150000Z       24 |     const checkinAt = Date.now() + 48 * HOUR;
+2026-10-12T08:13:54.6153000Z       25 |     await recordAudit('cancel-requested');
+2026-10-12T08:13:54.6156000Z     > 26 |     expect(cancellationFee({ totalCents: 24000, checkinAt })).toBe(0);
+2026-10-12T08:13:54.6159000Z          |                                                               ^
+2026-10-12T08:13:54.6162000Z       27 |   });
+2026-10-12T08:13:54.6165000Z       28 | });
+2026-10-12T08:13:54.6168000Z       29 |
+2026-10-12T08:13:54.6171000Z 
+2026-10-12T08:13:54.6174000Z       at Object.toBe (tests/booking/priceCalculator.test.js:26:63)
+2026-10-12T08:13:54.6177000Z 
+2026-10-12T08:13:54.9120330Z Test Suites: 1 failed, 5 passed, 6 total
+2026-10-12T08:13:54.9120910Z Tests:       3 failed, 33 passed, 36 total
+2026-10-12T08:13:54.9121420Z Snapshots:   0 total
+2026-10-12T08:13:54.9121870Z Time:        2.214 s
+2026-10-12T08:13:54.9122300Z Ran all test suites.
+2026-10-12T08:13:55.0410020Z ##[error]Process completed with exit code 1.
+2026-10-12T08:13:55.0520330Z ##[endgroup]
+
+# --- Re-run failed jobs, attempt 2 (sama commit, 6 minutit hiljem) ---
+2026-10-12T08:20:11.3310020Z ##[group]Run npm test
+2026-10-12T08:20:13.7820110Z FAIL tests/booking/priceCalculator.test.js
+2026-10-12T08:20:13.7821020Z   calculatePrice
+2026-10-12T08:20:13.7821550Z     ✓ 3.1 two weekday nights cost 2 x nightly rate (1 ms)
+2026-10-12T08:20:13.7822010Z     ✕ 3.2 Saturday and Sunday nights are 20% more expensive (1 ms)
+2026-10-12T08:20:13.7822480Z     ✕ 7.1 regular guest can book 30 nights
+2026-10-12T08:20:13.7822930Z   cancellationFee
+2026-10-12T08:20:13.7823390Z     ✓ 5.1 cancelling exactly 48 hours before check-in is free (1 ms)
+2026-10-12T08:20:13.9120330Z Tests:       2 failed, 34 passed, 36 total
+2026-10-12T08:20:14.0410020Z ##[error]Process completed with exit code 1.
