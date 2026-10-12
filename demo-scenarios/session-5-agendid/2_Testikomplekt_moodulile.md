@@ -26,6 +26,9 @@ Valige **üks rada** — see, mis on lähem teie tööle.
 3. **Triaaž (8 min):** iga punane test — viga koodis või testis? Koodivea kohta bug report'i pealkiri.
 4. **Refaktoor (5 min):** nädalavahetuse hinnaloogika ühte abifunktsiooni; punaste arv ei muutu.
 
+**Codexi kasutajad (kohustuslik, 3 min):** tehke samm 1 ka Claude'i või GitHub Copilotiga ja kirjutage
+üles üks erinevus (`PROMPTID.md` → Harjutus 2, rada A).
+
 ## Rada B — andmeladu
 
 **Eesmärk:** agent kirjutab LDM-i järgi 0-rea testid — ja te tõestate, et iga test **suudab kukkuda**.

@@ -106,6 +106,10 @@ Tõsta see ühte abifunktsiooni. Ära muuda käitumist ega paranda vigu.
 Käivita enne ja pärast npx jest tests/booking — punaseid ja rohelisi peab olema sama palju.
 ```
 
+**Codexi kasutajad (kohustuslik, 3 min):** kleepige Samm 1 prompt ka **Claude'ile** (claude.ai või
+Claude Code) või **GitHub Copilotile** (Copilot Chat) koos faili sisuga. Kirjutage üles üks asi, mida
+see agent leidis teisiti kui Codex.
+
 ### Rada B — andmeladu
 
 **Samm 1 — ehita ja selgita:**
