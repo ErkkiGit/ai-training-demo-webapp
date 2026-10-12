@@ -5,7 +5,7 @@
 **Valmis, kui:** (1) failis `.github/workflows/tests.yml` on töö, mis jooksutab `npm run test:stable`
 ja eraldi karantiinitöö flaky testidele; (2) näidislogi iga kukkunud testi kohta on tabelirida ja otsus,
 kas PR-i võib merge'ida.
-**Näitate lõpus:** workflow fail (või Actions vahekaart) + triaaži tabel.
+**Arutelus jagate:** workflow fail (või Actions vahekaart) + triaaži tabel.
 
 ## Sammud (promptid: `PROMPTID.md` → Harjutus 4)
 

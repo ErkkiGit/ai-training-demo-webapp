@@ -15,7 +15,7 @@ Kõik andmed on väljamõeldud või avalikud — AI tohib kogu repot vabalt näh
 | **Sisend** | Täpsed failid, millest alustate |
 | **Sammud** | Nummerdatud sammud; prompt on failis `PROMPTID.md` sama pealkirja all |
 | **Valmis, kui** | Kontrollitav tingimus — siis olete valmis („üheksa korda mõõda, üks kord lõika“) |
-| **Näitate lõpus** | Mida arutelus ekraanil näitate |
+| **Arutelus jagate** | Mida arutelus ekraanil näitate |
 
 ## Harjutused
 
@@ -24,9 +24,10 @@ Kõik andmed on väljamõeldud või avalikud — AI tohib kogu repot vabalt näh
 | `0_Seadistus.md` | Harjutus 0 — agent tööle + kontekstifail | 15 min |
 | `1_UI_API_automaattestid.md` | Harjutus 1 — agent kirjutab UI- ja API-automaattestid | 40 min |
 | `2_Testikomplekt_moodulile.md` | Harjutus 2 — testikomplekt olemasolevale moodulile (rada A: kood, rada B: SQL-andmeladu) | 30 min |
-| `3_Flaky_testid.md` | Harjutus 3 — flaky testide diagnoos ja parandus (kolmekesi) | 25 min |
+| `3_Flaky_testid.md` | Harjutus 3 — agent parandab flaky testid iseseisvalt (kolmekesi) | 25 min |
 | `4_CI_ja_AI.md` | Harjutus 4 — testid CI-sse + AI triaaž | 12 min |
 | `5_Lokaalne_mudel.md` | Lokaalne mudel vs pilv — koolitusel demo, kodus valikuline | — |
+| (ideede tabel, QR slaidil) | Harjutus 5 — AI-ideed teie projektidest (rühmades) | 10 min |
 | `6_Korduvad_ulesanded_ja_skillid.md` | Viitematerjal: agendid ajakava järgi, GitHubi agendid, skill'id | — |
 | `PROMPTID.md` | Kõik promptid, samade pealkirjade all | — |
 

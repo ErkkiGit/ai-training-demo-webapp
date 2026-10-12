@@ -144,20 +144,23 @@ ja transform.sql-i rida, kus viga on.
 
 ## Harjutus 3 — Flaky testide diagnoos ja parandus
 
-**Samm 2 — diagnoos:**
+Andke see prompt **ühe korraga** ja laske agendil töötada küsimata (vt `3_Flaky_testid.md`, samm 2):
 ```
 Testid failis tests/flaky/bookingFlaky.test.js kukuvad juhuslikult.
-Mõõtmise tulemus (10 jooksu): <kleepige npm run test:repeat väljund>.
-Iga testi F1–F4 kohta: juurpõhjus ühe lausega; kategooria (võidujooks / jagatud olek /
-aeg-kell / juhuslikud andmed / muu); tõend (fail + rida); kas viga on testis või tootekoodis.
-Ära veel midagi muuda.
-```
+Mõõtmise tulemus (10 jooksu): <kleepige npm run test:repeat -- 10 väljund>.
 
-**Samm 3 — parandus:**
-```
-Paranda testid F1–F4 nii, et need on deterministlikud.
-Ära lisa retry'd, ära pikenda timeout'e, ära kustuta ega jäta vahele ühtegi testi, ära nõrgenda
-kontrolli. Muuda ainult testifaili, kui tootekoodis pole viga.
+Eesmärk: kõik testid F1–F4 on deterministlikud.
+Valmis, kui: npm run test:repeat -- 20 näitab "20/20 runs green".
+Töötage iseseisvalt: diagnoosige, parandage, käivitage npm run test:repeat -- 20 ise uuesti,
+kuni eesmärk on täidetud. Kõige rohkem 5 parandusringi — kui siis pole valmis, peatuge ja selgitage miks.
+
+Piirid:
+- muutke ainult faili tests/flaky/bookingFlaky.test.js;
+- ärge lisage retry'd, ärge pikendage timeout'e, ärge kasutage skip'i, ärge nõrgendage ühtegi kontrolli;
+- ärge muutke tootekoodi.
+
+Lõpuks tabel: test | juurpõhjus | kategooria (võidujooks / jagatud olek / aeg-kell / juhuslikud andmed) |
+tõend (fail + rida) | parandus — ja viimase npm run test:repeat -- 20 väljund.
 ```
 
 ---

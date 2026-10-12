@@ -3,7 +3,7 @@
 **Eesmärk:** agent töötab teie repos ja teab teie testimise reegleid ilma, et peaksite neid iga kord kordama.
 **Sisend:** teie fork sellest repost (vt `LOE_MIND.md` → Alustuseks).
 **Valmis, kui:** kontekstifailis on jaotis „Testide stiil“ (kirjutatud olemasolevate testide põhjal) ja pärast agendi taaskäivitust vastab ta küsimusele „Kust sa tead, mis on testi oodatav tulemus?“ viitega nõuete failile.
-**Näitate lõpus:** oma kontekstifaili jaotisi „Testide stiil“ ja „Testimise reeglid“.
+**Arutelus jagate:** oma kontekstifaili jaotisi „Testide stiil“ ja „Testimise reeglid“.
 
 ## Sammud
 

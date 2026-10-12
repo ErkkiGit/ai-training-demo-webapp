@@ -12,7 +12,7 @@
 (2) **S1 on roheline**; (3) **nõude 2.1 test (lahkumine enne saabumist) on punane** — see on päris viga,
 mille leidsite Sessioon 4-s käsitsi; (4) iga punase testi kohta oskate öelda: viga süsteemis või testis.
 
-**Näitate lõpus:** käsu väljund (rohelised + punane) ja ühe testi kood koos selgitusega, mida see kontrollib.
+**Arutelus jagate:** käsu väljund (rohelised + punane) ja ühe testi kood koos selgitusega, mida see kontrollib.
 
 ## Agent kui testija vs agent kui autor
 

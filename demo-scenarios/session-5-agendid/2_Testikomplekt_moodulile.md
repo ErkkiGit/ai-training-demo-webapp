@@ -18,7 +18,7 @@ Valige **üks rada** — see, mis on lähem teie tööle.
 **Sisend:** `src/booking/priceCalculator.js` + nõuded 2.1, 2.2, 3.1, 3.2, 3.4, 4.1, 4.2, 7.1.
 **Valmis, kui:** iga nimetatud nõude kohta on vähemalt üks test; iga punase testi kohta on otsus
 „viga koodis / viga testis“; refaktoori järel on punaseid täpselt sama palju kui enne.
-**Näitate lõpus:** `npx jest tests/booking` väljund + punaste testide tabel.
+**Arutelus jagate:** `npx jest tests/booking` väljund + punaste testide tabel.
 
 **Sammud** (promptid: `PROMPTID.md` → Harjutus 2, rada A)
 1. **Kaart (5 min):** agent teeb tabeli funktsioon | nõue ja loetelu nõuetest, mille kontrolli koodis pole.
@@ -35,7 +35,7 @@ Valige **üks rada** — see, mis on lähem teie tööle.
 **Sisend:** `edw/LDM.md` (R1–R9), `edw/transform.sql`, staging `edw/staging.sql`.
 **Valmis, kui:** iga reegli R1–R9 kohta on test; `npm run edw:test -- --rikutud` näitab **kõik testid punasena**;
 iga puhaste andmete punase testi kohta on otsus „viga teisenduses / viga testis“.
-**Näitate lõpus:** `npm run edw:test` ja `npm run edw:test -- --rikutud` väljund + vigade tabel.
+**Arutelus jagate:** `npm run edw:test` ja `npm run edw:test -- --rikutud` väljund + vigade tabel.
 
 **Sammud** (promptid: `PROMPTID.md` → Harjutus 2, rada B)
 1. **Ehitage ja vaadake (3 min):** `npm run edw:build`; agent selgitab, mida `transform.sql` teeb.
