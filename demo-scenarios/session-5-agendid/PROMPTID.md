@@ -1,169 +1,187 @@
-# Promptid ja käsud — Sessioon 5
+# Promptid — Sessioon 5
 
-Kõik promptid töötavad Claude Code'is, Codexis ja Copilot agent mode'is ühtemoodi:
-kleepige prompt agendile repo juurkaustas. Veebiversioonis (claude.ai / chatgpt.com /
-Copilot Chat) lisage vestlusesse ka nimetatud failide sisu.
+Pealkirjad on samad mis harjutuste failides (`0_…` kuni `5_…`). Kleepige prompt agendile repo
+juurkaustas. Veebiversioonis (claude.ai / chatgpt.com / Copilot Chat) lisage ka nimetatud failide sisu.
 
 ---
 
-## Harjutus 0 — Kontekstifail
+## Harjutus 0 — Agent tööle + kontekstifail
 
-Pärast `/init` käsku:
-
+Pärast `/init`:
 ```
 Lisa kontekstifaili (CLAUDE.md / AGENTS.md / .github/copilot-instructions.md) jaotis
 "Testimise reeglid" täpselt nende neljaga:
-1. Testid on Jestis, failid kaustas tests/, nimi <moodul>.test.js.
+1. Testid on Jestis, failid kaustas tests/, nimi <moodul>.test.js. SQL-testid on kaustas edw/tests/.
 2. Rahasummad on sentides (täisarvud), kuupäevad YYYY-MM-DD UTC-s.
-3. Äriloogika reeglid on failis demo-scenarios/session-4-restful-booker/1_Broneeringu_nouded_mustand.md.
-   Testi oodatav tulemus tuleb nõudest, mitte koodist.
+3. Äriloogika on failides demo-scenarios/session-4-restful-booker/1_Broneeringu_nouded_mustand.md
+   ja edw/LDM.md. Testi oodatav tulemus tuleb nõudest, mitte koodist.
 4. Kui test kukub, ära muuda oodatavat tulemust ilma minult küsimata.
 Ära muuda midagi muud.
 ```
 
 ---
 
-## Praktika 1 — Testikomplekt hinnamoodulile (30 min)
+## Harjutus 1 — Agent kirjutab UI- ja API-automaattestid
 
-**Sisend:** `src/booking/priceCalculator.js` + nõuded 2.1, 2.2, 3.1, 3.2, 3.4, 4.1, 4.2, 7.1
-failist `demo-scenarios/session-4-restful-booker/1_Broneeringu_nouded_mustand.md`.
-**Väljund:** fail `tests/booking/priceCalculator.test.js` + tabel „punased testid“ + refaktooritud moodul.
+**Samm 1 — uuri lehte** (brauseritööriistaga agent):
+```
+Ava https://automationintesting.online/reservation/1?checkin=2027-05-10&checkout=2027-05-12
+ja vajuta "Reserve Now". Kirjelda mulle: millised väljad vormil on (placeholder'id),
+millised nupud, mis tekst kuvatakse pärast edukat broneeringut. Ära veel teste kirjuta.
+```
 
-**Samm 1 — Navigeeri (5 min):**
+**Samm 2 — UI-testid:**
+```
+Kirjuta stsenaariumide S1, S2 ja S3 kohta failist
+demo-scenarios/session-4-restful-booker/7_Brauseri_stsenaariumid.md automaattestid.
+Raamistik: <Selenium JavaScript kausta tests/ui/ | minu projekti raamistik: ...>.
+Reeglid:
+- Iga stsenaarium = üks test; testi nimi algab stsenaariumi ID-ga (nt "S1 ...").
+- Oodatav tulemus tuleb stsenaariumist, mitte sellest, mida leht praegu teeb.
+- Kasuta testandmeid failist; kuupäevad juhuslikult vähemalt 3 kuud ette.
+- Kui nupp on ekraanilt väljas, keri see enne klikkimist nähtavale.
+Käivita testid (npm run test:ui) ja ütle iga testi kohta: roheline või punane ja miks.
+Ära muuda ühegi testi oodatavat tulemust, et see roheliseks saada.
+```
+
+**Samm 3 — API-testid:**
+```
+Kirjuta failis demo-scenarios/session-4-restful-booker/3_API_testi_kontrollnimekiri.md
+kirjeldatud API kohta vähemalt 4 automaattesti, sh test nõude 2.1 kohta (lahkumine enne saabumist).
+Formaat: <Postmani kollektsioon automation/api/broneering.postman_collection.json | minu raamistik: ...>.
+Iga test kontrollib nii staatuskoodi kui ka seda, mis kehas tegelikult salvestati.
+Käivita (npm run test:api -- automation/api/broneering.postman_collection.json)
+ja ütle iga testi kohta: roheline või punane ja miks.
+```
+
+**Samm 4 — kas test suudab kukkuda:**
+```
+Vali üks roheline test ja muuda selle oodatav tulemus AJUTISELT valeks (nt teine tekst või
+staatuskood). Käivita — test peab nüüd olema punane. Seejärel taasta õige oodatav tulemus.
+Ütle iga testi kohta, mis on see üks asi, mille rikkumist see test püüab.
+```
+
+---
+
+## Harjutus 2 — Testikomplekt olemasolevale moodulile
+
+### Rada A — hinnamoodul
+
+**Samm 1 — kaart:**
 ```
 Loe src/booking/priceCalculator.js. Ära muuda midagi.
 Tee tabel: funktsioon | sisendid | väljund | milliseid nõudeid failist
-1_Broneeringu_nouded_mustand.md see funktsioon katab (nõude number).
-Eraldi loetelu: nõuded 2.1, 2.2, 3.1, 3.2, 3.4, 4.1, 4.2, 7.1, mille kontrolli sa koodist EI leia.
+demo-scenarios/session-4-restful-booker/1_Broneeringu_nouded_mustand.md see katab.
+Eraldi loetelu: nõuded 2.1, 2.2, 3.1, 3.2, 3.4, 4.1, 4.2, 7.1, mille kontrolli koodist EI leia.
 ```
 
-**Samm 2 — Kirjuta testid (12 min):**
+**Samm 2 — testid:**
 ```
 Kirjuta fail tests/booking/priceCalculator.test.js.
-Iga nõude 2.1, 2.2, 3.1, 3.2, 3.4, 4.1, 4.2, 7.1 kohta vähemalt üks test,
-piirväärtustega nõuetel (2.2, 4.1, 7.1) test vahetult alla piiri, piiril ja üle piiri.
-Testi nimi algab nõude numbriga, nt "4.1 ...".
-Oodatav tulemus tuleb nõudest, mitte koodist. Kui nõue on mitmeti mõistetav,
-kirjuta testi kohale kommentaar "KÜSIMUS:" ja vali rangem tõlgendus.
+Iga nõude 2.1, 2.2, 3.1, 3.2, 3.4, 4.1, 4.2, 7.1 kohta vähemalt üks test; piirväärtustega
+nõuetel (2.2, 4.1, 7.1) test alla piiri, piiril ja üle piiri. Testi nimi algab nõude numbriga.
+Oodatav tulemus tuleb nõudest, mitte koodist. Mitmeti mõistetava nõude juurde kommentaar "KÜSIMUS:".
 Käivita: npx jest tests/booking. Ära paranda midagi — ütle ainult, mis kukkus.
 ```
 
-**Samm 3 — Triaaž (5 min):**
+**Samm 3 — triaaž:**
 ```
-Iga punase testi kohta: kas viga on koodis või testis?
-Tabel: test | nõue | oodatud | tegelik | viga koodis / viga testis | üks lause, miks.
-Koodivigade kohta kirjuta bug report'i pealkiri (max 12 sõna).
+Iga punase testi kohta: tabel test | nõue | oodatud | tegelik | viga koodis / viga testis | miks.
+Koodivigade kohta bug report'i pealkiri (max 12 sõna).
 ```
 
-**Samm 4 — Refaktoor (5 min):**
+**Samm 4 — refaktoor:**
 ```
-Funktsioonides calculatePrice ja quoteNightly on nädalavahetuse hinna loogika kahes kohas.
+Funktsioonides calculatePrice ja quoteNightly on nädalavahetuse hinnaloogika kahes kohas.
 Tõsta see ühte abifunktsiooni. Ära muuda käitumist ega paranda vigu.
-Käivita enne ja pärast: npx jest tests/booking — rohelisi ja punaseid teste
-peab olema täpselt sama palju.
+Käivita enne ja pärast npx jest tests/booking — punaseid ja rohelisi peab olema sama palju.
 ```
 
-**Samm 5 — Teine agent (3 min, kohustuslik ainult Codexi kasutajatele):**
-Kleepige Samm 1 prompt ja `priceCalculator.js` sisu kas **Claude'i** (claude.ai või
-Claude Code) või **GitHub Copiloti** (Copilot Chat github.com-is või VS Code'is) vestlusesse.
-Kirjutage üles üks asi, mida see leidis teisiti kui Codex.
+### Rada B — andmeladu
 
-**Kui Node.js puudub:** tehke sammud 1–3 veebiversioonis; „käivita“ asemel küsige:
-„Millised neist testidest praeguse koodiga kukuksid ja miks? Näita arvutust.“
+**Samm 1 — ehita ja selgita:**
+```
+Käivita npm run edw:build. Loe edw/LDM.md ja edw/transform.sql. Ära muuda midagi.
+Tee tabel: reegel (R1–R9) | tabel.veerg | kas transform.sql teeb seda nii, nagu LDM ütleb (jah / ei / ei tea) | miks.
+```
+
+**Samm 2 — testid:**
+```
+Kirjuta iga LDM reegli R1–R9 kohta üks SQL-test kausta edw/tests/, failinimi R<nr>_<lühinimi>.sql.
+Test on päring, mis tagastab reeglit rikkuvad read: 0 rida = korras.
+Oodatav tulemus tuleb LDM-ist, mitte transform.sql-ist. Ära muuda transform.sql-i.
+Käivita npm run edw:test ja ütle iga punase testi kohta, milliseid ridu see leidis.
+```
+
+**Samm 3 — kas test suudab kukkuda:**
+```
+Käivita npm run edw:test -- --rikutud. Fail edw/rikutud_andmed.sql rikub meelega iga reeglit.
+Iga test, mis jääb seal roheliseks, ei kontrolli seda, mida peab — selgita miks ja kirjuta see ümber.
+Korda, kuni kõik testid on rikutud andmetel punased.
+```
+
+**Samm 4 — triaaž:**
+```
+Puhaste andmete iga punase testi kohta: viga transform.sql-is või testis? Mitu punast testi
+võib tulla samast juurpõhjusest — rühmita need. Iga juurpõhjuse kohta bug report'i pealkiri
+ja transform.sql-i rida, kus viga on.
+```
 
 ---
 
-## Praktika 2 — Flaky testid (kolmeses rühmas, 30 min)
+## Harjutus 3 — Flaky testide diagnoos ja parandus
 
-**Sisend:** `tests/flaky/bookingFlaky.test.js`, `src/booking/bookingStore.js`, `src/booking/priceCalculator.js`.
-**Väljund:** parandatud testifail + tabel + tõend: 20/20 käivitust rohelised.
-
-Rühmas võimalusel erinevad agendid — igaüks parandab kõik testid oma agendiga,
-lõpus võrdlete.
-
-**Samm 1 — Mõõda (3 min):** `npm run test:repeat -- 10`
-Kirjutage üles: mitu käivitust 10-st olid rohelised, iga testi kukkumiste arv.
-
-**Samm 2 — Diagnoos (10 min):**
+**Samm 2 — diagnoos:**
 ```
 Testid failis tests/flaky/bookingFlaky.test.js kukuvad juhuslikult.
-Mõõtmise tulemus (10 käivitust): <kleepige npm run test:repeat väljund>.
-Iga testi F1–F4 kohta:
-1. juurpõhjus ühe lausega,
-2. kategooria: võidujooks (race) / jagatud olek / aeg-kell / juhuslikud andmed / muu,
-3. tõend koodist (fail + rida),
-4. kas viga on testis või tootekoodis.
+Mõõtmise tulemus (10 jooksu): <kleepige npm run test:repeat väljund>.
+Iga testi F1–F4 kohta: juurpõhjus ühe lausega; kategooria (võidujooks / jagatud olek /
+aeg-kell / juhuslikud andmed / muu); tõend (fail + rida); kas viga on testis või tootekoodis.
 Ära veel midagi muuda.
 ```
 
-**Samm 3 — Paranda (10 min):**
+**Samm 3 — parandus:**
 ```
 Paranda testid F1–F4 nii, et need on deterministlikud.
-Reeglid: ära lisa retry'd, ära pikenda timeout'e, ära kustuta ega jäta vahele ühtegi testi,
-ära nõrgenda kontrolli, mida test kontrollib. Kui test kontrollib valet asja, ütle seda
-ja paku õige kontroll. Muuda ainult testifaili, kui tootekoodis pole viga.
+Ära lisa retry'd, ära pikenda timeout'e, ära kustuta ega jäta vahele ühtegi testi, ära nõrgenda
+kontrolli. Muuda ainult testifaili, kui tootekoodis pole viga.
 ```
 
-**Samm 4 — Tõesta (3 min):** `npm run test:repeat -- 20` → peab olema `20/20 runs green`.
-
-**Samm 5 — Võrdle rühmas (4 min):** kas kõik agendid leidsid sama juurpõhjuse?
-Kas mõni agent „parandas“ testi retry, pikema ooteaja või `skip`-iga?
-
-**Kui Node.js puudub:** kleepige kolme faili sisu vestlusesse ja tehke Samm 2;
-Samm 4 asemel küsige: „Tõesta iga paranduse kohta, miks see ei saa enam juhuslikult kukkuda.“
-
 ---
 
-## Plokk C — Taustaagendi PR-i ülevaatus (10 min)
+## Harjutus 4 — Testid CI-sse + AI triaaž
 
-Avage oma forgis taustaagendi PR (või haru `fix/orders-400`). Kontrollige:
-
-1. Kas kõik 4 aktsepteerimiskriteeriumit on täidetud? (issue tekstist)
-2. Kas mõni olemasolev test on kustutatud või nõrgendatud? (`git diff main -- tests/`)
-3. Kas agent muutis faile, mida issue ei nõudnud?
-4. Kas `npm test` on teie masinas roheline?
-
-Otsus: **merge** / **muutused vajalikud** (kirjutage PR-i kommentaar, agent parandab) / **sulge**.
-
----
-
-## Harjutus 3 — CI/CD + AI (paaris, 15 min)
-
-**Sisend:** teie fork, `3_CI_logi_naidis.txt`.
-**Väljund:** `.github/workflows/tests.yml` + AI-triaaži tabel CI logist.
-
-**Samm 1 — Workflow (6 min):**
+**Samm 1 — workflow:**
 ```
 Loo .github/workflows/tests.yml:
-- käivitub igal push'il ja pull request'il,
-- ubuntu-latest, Node.js 24, npm ci,
-- töö "tests": npm test (peab olema roheline, muidu PR-i ei saa merge'ida),
-- töö "flaky-karantiin": npm run test:repeat -- 5, continue-on-error: true
-  (flaky testid ei blokeeri, aga tulemus on nähtav).
+- käivitub igal push'il ja pull request'il; ubuntu-latest, Node.js 24, npm ci;
+- töö "tests": npm run test:stable (peab olema roheline);
+- töö "flaky-karantiin": npm run test:repeat -- 5, continue-on-error: true.
 Selgita iga rida ühe lausega.
 ```
-Push forki → **Actions** vahekaart: kas „tests“ on roheline?
 
-**Samm 2 — AI triaaž CI logist (6 min, kõigile):**
+**Samm 2 — triaaž:**
 ```
-Lisatud on GitHub Actionsi logi (3_CI_logi_naidis.txt).
-Iga kukkunud testi kohta: tabel test | viga koodis / flaky / keskkond / test on vale |
-tõend logist (rea tsitaat) | järgmine samm.
-Lõpus üks lause: kas selle PR-i võib merge'ida?
+Lisatud on GitHub Actionsi logi (4_CI_logi_naidis.txt).
+Iga kukkunud testi kohta tabel: test | viga koodis / flaky / keskkond / test on vale |
+tõend logist (rea tsitaat) | järgmine samm. Lõpus üks lause: kas selle PR-i võib merge'ida?
 ```
-
-**Samm 3 — AI samm pipeline'i (3 min, valikuline):** vaadake oma agendi ametlikku juhendit
-ja arutage paarilisega, millisesse workflow sammu see sobiks:
-- Claude Code: https://code.claude.com/docs/en/github-actions (`anthropics/claude-code-action`)
-- Codex: https://developers.openai.com/codex/github-action (`openai/codex-action`)
-- Copilot: automaatne Copilot code review igal PR-il (repo Settings → Rules) ja
-  GitHub Agentic Workflows (https://github.github.com/gh-aw/)
-
-NB: Claude'i ja Codexi action vajab API-võtit GitHubi *secret*'ina — ärge kunagi pange
-võtit workflow faili endasse.
 
 ---
 
-## Praktika 3 — Lokaalne mudel vs pilv (20 min)
+## Harjutus 5 — Lokaalne mudel vs pilv
 
-Vt `4_Lokaalne_mudel.md`.
+Sama prompt nii `ollama run qwen3:4b` kui ka pilvetööriistale:
+```
+Kirjuta Jest testid (JavaScript) funktsioonile calculatePrice allolevas koodis.
+Nõuded:
+2.1 Saabumine peab olema enne lahkumist.
+2.2 Minimaalne peatus on 1 öö, maksimaalne 14 ööd.
+4.1 Sissemakse on kohustuslik, kui peatus on üle nädala.
+7.1 Püsikliendid (isRegular: true) võivad broneerida kuni 30 ööd.
+Piirväärtuste kohta test alla piiri, piiril ja üle piiri. Testi nimi algab nõude numbriga.
+Moodul imporditakse nii: const { calculatePrice } = require('../../src/booking/priceCalculator');
+Vasta ainult koodiga.
+
+<kleepige siia kogu src/booking/priceCalculator.js sisu>
+```

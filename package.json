@@ -6,9 +6,14 @@
   "scripts": {
     "start": "node src/server.js",
     "test": "jest --watchman=false",
-    "test:stable": "jest --watchman=false --testPathIgnorePatterns=checkoutFlow.test.js --testPathIgnorePatterns=/tests/flaky/",
+    "test:stable": "jest --watchman=false --testPathIgnorePatterns=checkoutFlow.test.js --testPathIgnorePatterns=/tests/flaky/ --testPathIgnorePatterns=/tests/ui/",
     "test:flaky": "jest tests/flaky --watchman=false --randomize --testPathIgnorePatterns=/node_modules/",
-    "test:repeat": "node scripts/run-repeat.js"
+    "test:repeat": "node scripts/run-repeat.js",
+    "edw:build": "node scripts/edw.js build",
+    "edw:sql": "node scripts/edw.js sql",
+    "edw:test": "node scripts/edw.js test",
+    "test:ui": "jest tests/ui --watchman=false --testPathIgnorePatterns=/node_modules/",
+    "test:api": "newman run"
   },
   "keywords": [
     "training",
@@ -23,6 +28,8 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
+    "newman": "^6.2.3",
+    "selenium-webdriver": "^4.51.0",
     "supertest": "^7.0.0"
   },
   "jest": {
@@ -30,7 +37,8 @@
     "clearMocks": true,
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/tests/flaky/"
+      "/tests/flaky/",
+      "/tests/ui/"
     ]
   }
 }

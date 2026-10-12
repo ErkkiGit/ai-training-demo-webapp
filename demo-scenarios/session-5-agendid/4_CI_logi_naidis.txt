@@ -1,5 +1,5 @@
 # GitHub Actions log — workflow "tests", PR #14 "Hinnamoodul: püsikliendi soodustus", attempt 1
-# (Näidislogi Harjutus 3 jaoks. Päris logi saate oma forgi Actions vahekaardilt.)
+# (Näidislogi Harjutus 4 jaoks. Päris logi saate oma forgi Actions vahekaardilt.)
 2026-10-12T08:13:41.1022310Z ##[group]Run actions/checkout@v4
 2026-10-12T08:13:42.0034120Z ##[endgroup]
 2026-10-12T08:13:42.2210040Z ##[group]Run actions/setup-node@v4

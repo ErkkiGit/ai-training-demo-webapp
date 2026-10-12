@@ -53,6 +53,8 @@ npm run test:flaky        # once, in random order
 npm run test:repeat -- 10 # 10 times, with a per-test failure tally
 ```
 
+Session 5 also adds `npm run test:ui` (Selenium, `tests/ui/`), `npm run test:api -- <collection.json>` (Newman) and the SQL mini data warehouse: `npm run edw:build`, `npm run edw:test` (`-- --rikutud` runs the same tests on deliberately broken data).
+
 ## Demo Scenarios
 
 | Folder | Use |
@@ -65,7 +67,7 @@ npm run test:repeat -- 10 # 10 times, with a per-test failure tally
 | `demo-scenarios/test-summary-notes/` | Optional bonus scenario — not part of the main 2-track exercise, kept for reuse |
 | `demo-scenarios/session-3-fallback-pakk/` | Session 3 fallback material (Gemini Notebook / Atlassian AI / Projects exercises) — spec, test plan, bug report, API description, sample Jira tickets |
 | `demo-scenarios/session-4-restful-booker/` | Session 4 (manual testing with AI) — Restful-booker requirements, test data, reports, PR diff, prompts |
-| `demo-scenarios/session-5-agendid/` | Session 5 (test automation and coding agents) — setup for Claude Code / Codex / Copilot, prompts, CI log, local-model exercise. Code: `src/booking/`, flaky tests: `tests/flaky/` |
+| `demo-scenarios/session-5-agendid/` | Session 5 (test automation and coding agents) — exercises 0–5: agent setup, UI/API automation (Selenium JS or own framework, Postman/Newman), test suite for an existing module (`src/booking/` or the SQL mini data warehouse in `edw/`), flaky tests (`tests/flaky/`), CI, local models |
 
 ## Browser-Only Exercise Path
 
