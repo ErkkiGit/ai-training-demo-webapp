@@ -7,7 +7,15 @@ juurkaustas. Veebiversioonis (claude.ai / chatgpt.com / Copilot Chat) lisage ka 
 
 ## Harjutus 0 — Agent tööle + kontekstifail
 
-Pärast `/init`:
+Pärast `/init`, **samm 3a — stiilijuhis olemasolevatest testidest:**
+```
+Loe kõik olemasolevad testifailid kaustas tests/ (mitte tests/flaky/). Ära muuda neid.
+Kirjuta kontekstifaili jaotis "Testide stiil": failide ja testide nimetamine, describe/test struktuur,
+kuidas testandmed luuakse, millised kontrollid (expect) on tavalised, mida välditakse.
+Iga reegli juurde üks lühike näide olemasolevast testist. Max 15 rida.
+```
+
+**Samm 3b — testimise reeglid:**
 ```
 Lisa kontekstifaili (CLAUDE.md / AGENTS.md / .github/copilot-instructions.md) jaotis
 "Testimise reeglid" täpselt nende neljaga:
@@ -36,6 +44,7 @@ Kirjuta stsenaariumide S1, S2 ja S3 kohta failist
 demo-scenarios/session-4-restful-booker/7_Brauseri_stsenaariumid.md automaattestid.
 Raamistik: <Selenium JavaScript kausta tests/ui/ | minu projekti raamistik: ...>.
 Reeglid:
+- Järgi kontekstifaili jaotist "Testide stiil".
 - Iga stsenaarium = üks test; testi nimi algab stsenaariumi ID-ga (nt "S1 ...").
 - Oodatav tulemus tuleb stsenaariumist, mitte sellest, mida leht praegu teeb.
 - Kasuta testandmeid failist; kuupäevad juhuslikult vähemalt 3 kuud ette.
@@ -77,7 +86,7 @@ Eraldi loetelu: nõuded 2.1, 2.2, 3.1, 3.2, 3.4, 4.1, 4.2, 7.1, mille kontrolli 
 
 **Samm 2 — testid:**
 ```
-Kirjuta fail tests/booking/priceCalculator.test.js.
+Kirjuta fail tests/booking/priceCalculator.test.js. Järgi kontekstifaili jaotist "Testide stiil".
 Iga nõude 2.1, 2.2, 3.1, 3.2, 3.4, 4.1, 4.2, 7.1 kohta vähemalt üks test; piirväärtustega
 nõuetel (2.2, 4.1, 7.1) test alla piiri, piiril ja üle piiri. Testi nimi algab nõude numbriga.
 Oodatav tulemus tuleb nõudest, mitte koodist. Mitmeti mõistetava nõude juurde kommentaar "KÜSIMUS:".
@@ -169,7 +178,7 @@ tõend logist (rea tsitaat) | järgmine samm. Lõpus üks lause: kas selle PR-i 
 
 ---
 
-## Harjutus 5 — Lokaalne mudel vs pilv
+## Lokaalne mudel vs pilv (koolitusel demo, kodus valikuline)
 
 Sama prompt nii `ollama run qwen3:4b` kui ka pilvetööriistale:
 ```

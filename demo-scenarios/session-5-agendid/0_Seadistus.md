@@ -2,8 +2,8 @@
 
 **Eesmärk:** agent töötab teie repos ja teab teie testimise reegleid ilma, et peaksite neid iga kord kordama.
 **Sisend:** teie fork sellest repost (vt `LOE_MIND.md` → Alustuseks).
-**Valmis, kui:** pärast agendi taaskäivitust vastab ta küsimusele „Kust sa tead, mis on testi oodatav tulemus?“ viitega nõuete failile.
-**Näitate lõpus:** oma kontekstifaili jaotist „Testimise reeglid“.
+**Valmis, kui:** kontekstifailis on jaotis „Testide stiil“ (kirjutatud olemasolevate testide põhjal) ja pärast agendi taaskäivitust vastab ta küsimusele „Kust sa tead, mis on testi oodatav tulemus?“ viitega nõuete failile.
+**Näitate lõpus:** oma kontekstifaili jaotisi „Testide stiil“ ja „Testimise reeglid“.
 
 ## Sammud
 
@@ -20,7 +20,9 @@ Kontroll: küsige „Mis rakendus selles repos on? Vasta 3 lausega.“ — vastu
 **2. Looge kontekstifail (5 min):** kõigil kolmel on sama käsk `/init`
 (→ `CLAUDE.md` / `AGENTS.md` / `.github/copilot-instructions.md`).
 
-**3. Lisage testimise reeglid (3 min):** `PROMPTID.md` → Harjutus 0.
+**3. Stiilijuhis + reeglid (3 min):** agent loeb olemasolevad testid kaustas `tests/` ja kirjutab nende põhjal
+jaotise „Testide stiil“, seejärel lisab 4 testimise reeglit (`PROMPTID.md` → Harjutus 0). Nii näevad kõik
+agendi uued testid välja nagu olemasolevad.
 
 **4. Kontrollige (2 min):** sulgege agent, avage uuesti, küsige „Kust sa tead, mis on testi oodatav tulemus?“
 
