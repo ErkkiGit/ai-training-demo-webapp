@@ -29,7 +29,7 @@ mille leidsite Sessioon 4-s käsitsi; (4) iga punase testi kohta oskate öelda: 
 | UI | **Selenium (JavaScript)** — repos valmis | `npm run test:ui` | Kasutab teie Chrome'i. Failid kausta `tests/ui/` |
 | UI | Selenide / Selenium (Java) | teie projekti käsk | Kui teil on Java-projekt juba seadistatud |
 | UI | Playwright / Cypress | teie projekti käsk | Kui kasutate neid tööl |
-| API | **Postmani kollektsioon** — repos valmis | `npm run test:api -- automation/api/<fail>.json` | Saab avada ka Postmani rakenduses (Import) |
+| API | **Postmani kollektsioon**, jookseb skriptina (Newman) | `npm run test:api -- automation/api/<fail>.json` | Varuvariant: sama fail Postmani rakenduses (Import → Run) |
 | API | REST Assured / muu | teie projekti käsk | Kui kasutate seda tööl |
 
 ## Sammud
@@ -38,8 +38,9 @@ mille leidsite Sessioon 4-s käsitsi; (4) iga punase testi kohta oskate öelda: 
    (`PROMPTID.md` → Harjutus 1, samm 1). Ilma brauseritööriistata: kleepige stsenaarium ja lehe URL.
 2. **UI-testid (15 min)** — agent kirjutab S1, S2, S3 testideks ja käivitab need (samm 2).
 3. **API-testid (10 min)** — agent kirjutab kontrollnimekirja põhjal vähemalt 2 testi ja käivitab need (samm 3).
-4. **Kontrollige agenti (7 min)** — iga testi kohta: kas see saab kukkuda? Laske agendil üks oodatav
-   tulemus ajutiselt valeks muuta ja vaadake, et test läheb punaseks (samm 4).
+4. **Kontrollige agenti (7 min)** — iga testi kohta: kas see saab kukkuda? Näide: muutke API testis ootus
+   `403` → `404` (või UI testis „Booking Confirmed“ → „Booking Confirmedx“), käivitage — test peab minema
+   punaseks. Siis taastage õige ootus (samm 4).
 5. **Salvestage (3 min)** — `git` haru `harjutus1-<nimi>` (vt `LOE_MIND.md` → Kuidas tulemust jagada).
 
 **Testandmed:** eesnimi `Test`, perenimi `Koolitus`, e-post `test@example.com`, telefon `+37255500000`.

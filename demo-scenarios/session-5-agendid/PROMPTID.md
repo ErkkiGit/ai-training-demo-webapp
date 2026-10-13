@@ -185,6 +185,21 @@ tõend logist (rea tsitaat) | järgmine samm. Lõpus üks lause: kas selle PR-i 
 
 ---
 
+## Koos: korduv ülesanne (5 min)
+
+```
+Iga esmaspäev kell 8:07 käivita npm run test:repeat -- 20.
+Kui mõni test kukkus, tee kokkuvõte: test, mitu korda 20-st, tõenäoline kategooria
+(võidujooks / jagatud olek / aeg-kell / juhuslikud andmed).
+Ära muuda ühtegi faili ega tee PR-i.
+```
+
+- Claude Code: Desktop → Routines → New routine → **Local** (arvuti peab olema sees) · või `/schedule` (pilv, vajab GitHubi repot)
+- Codex: rakenduses **Scheduled** → uus ülesanne → valige repo kaust
+- Copilot: lisage Harjutus 4 `tests.yml`-i `on:` alla `schedule: - cron: '7 6 * * 1'` (GitHubi pilv, esmaspäev 06:07 UTC)
+
+---
+
 ## Lokaalne mudel vs pilv (koolitusel demo, kodus valikuline)
 
 Sama prompt nii `ollama run qwen3:4b` kui ka pilvetööriistale:

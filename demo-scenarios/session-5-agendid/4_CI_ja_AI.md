@@ -9,8 +9,10 @@ kas PR-i võib merge'ida.
 
 ## Sammud (promptid: `PROMPTID.md` → Harjutus 4)
 
-1. **Workflow (6 min):** agent loob `.github/workflows/tests.yml`. Fail jääb teile alles ja sobib ka teie oma
-   projekti. **Valikuline:** kui teil on GitHubis fork, push'ige see — siis näete jooksu **Actions** vahekaardil.
+1. **Workflow (6 min):** agent loob `.github/workflows/tests.yml`. See fail ütleb **GitHubile**, mida igal push'il
+   teha — testid jooksevad GitHubi pilvemasinas, mitte teie arvutis. Fail jääb teile alles ja sobib ka teie
+   projekti. **Valikuline:** kui teil on GitHubis fork, push'ige — **Actions** vahekaart näitab jooksu ja PR-i
+   juures on kõigile nähtav roheline/punane märk. GitLabis on sama loogika failiga `.gitlab-ci.yml`.
 2. **Triaaž (6 min):** agent loeb `4_CI_logi_naidis.txt` ja teeb tabeli
    test | viga koodis / flaky / keskkond / test on vale | tõend logist | järgmine samm.
 
