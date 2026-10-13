@@ -46,7 +46,7 @@ Ilma GitHubi kontota: **Code → Download ZIP**. Ilma Node.js-ita: vt iga harjut
 | Kus töötab | terminal, VS Code | terminal, VS Code, rakendus | VS Code (agent mode) |
 | Kontekstifail (`/init`) | `CLAUDE.md` | `AGENTS.md` | `.github/copilot-instructions.md` |
 | Brauseri kasutamine | Claude in Chrome | ChatGPT Browser | VS Code brauseritööriistad |
-| Lokaalne mudel | `ollama launch claude` | `codex --oss` | Ollama laiendus (Ask-režiim) |
+| Lokaalne mudel | `ollama launch claude` | `ollama launch codex` / `ollama launch chatgpt` | `ollama launch copilot` (CLI) · VS Code Chat (Ollama laiendus) |
 | Kui install ei õnnestu | claude.ai | chatgpt.com | Copilot Chat github.com-is |
 
 ## Kuidas tulemust jagada (rühmatöö ja arutelu)

@@ -33,5 +33,5 @@ Graafilise liidesega alternatiiv: **LM Studio** (https://lmstudio.ai) → otsige
 kõik 3 viga; teine jooks samal promptil ~6 minutit ning kasutas väljamõeldud välja — testid olid punased
 vale põhjusel. Punane test ei tähenda alati leitud viga.
 
-**Valikuline:** agent lokaalse mudeliga — `ollama launch claude` või `codex --oss -m qwen3:4b`.
+**Valikuline:** teie agent lokaalse mudeliga — terminalis `ollama` avab menüü (Claude Code, Codex, ChatGPT/Codexi rakendus, Copilot CLI, VS Code); nt `ollama launch claude --model qwen3:4b`.
 Väikesed mudelid kirjutavad teksti, aga tööriistade kasutamine jääb sageli pooleli.
