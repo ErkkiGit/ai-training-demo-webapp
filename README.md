@@ -68,6 +68,7 @@ Session 5 also adds `npm run test:ui` (Selenium, `tests/ui/`), `npm run test:api
 | `demo-scenarios/session-3-fallback-pakk/` | Session 3 fallback material (Gemini Notebook / Atlassian AI / Projects exercises) — spec, test plan, bug report, API description, sample Jira tickets |
 | `demo-scenarios/session-4-restful-booker/` | Session 4 (manual testing with AI) — Restful-booker requirements, test data, reports, PR diff, prompts |
 | `demo-scenarios/session-5-agendid/` | Session 5 (test automation and coding agents) — exercises 0–5: agent setup, UI/API automation (Selenium JS or own framework, Postman/Newman), test suite for an existing module (`src/booking/` or the SQL mini data warehouse in `edw/`), flaky tests (`tests/flaky/`), CI, local models |
+| `demo-scenarios/session-6-juurutamine/` | Session 6 (adoption best practices and idea evaluation) — AI usage policy template, 12 data examples, idea starter cards, impact × feasibility template, final-project brief template, prompts |
 
 ## Browser-Only Exercise Path
 
