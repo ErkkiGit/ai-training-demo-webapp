@@ -43,6 +43,6 @@ Kes on projektis üksi või admin-töö peal, liitub meeskonnaga, kelle ülesand
 | **„Valmis, kui“ ja peatamine** | mille järgi teame, et töötas; millal lõpetame |
 | **Riskid ja inimese kontroll** | agent soovitab / teeb mustandi / tegutseb ise? |
 
-## Esitlus (Plokk E, ~4 min meeskonna kohta)
+## Esitlus (Plokk E, 3 min + 1 min tagasisidet meeskonna kohta)
 
 Probleem → lahendus → oodatav mõju (enne → pärast) → suurim risk. Tagasiside: 1 tugevus · 1 küsimus · 1 risk.
