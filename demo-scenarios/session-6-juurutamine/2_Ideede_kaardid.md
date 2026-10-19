@@ -19,12 +19,14 @@ Mõelge oma kahele viimasele töönädalale. Kirjutage iga etapi juurde, mis võ
 
 Prompt: `PROMPTID.md` → Praktika 2a.
 
-## Samm 3 — kolmekesi (10 min)
+## Samm 3 — meeskonniti (10 min)
 
 Pange ideed kokku, kontrollige duplikaate ideede tabeliga ja lisage tabelisse 2–3 uut ideed —
 **igal ideel peab olema täidetud „Mõõdetav väärtus“** (vt valem allpool).
 
 ## Starter-kaardid — kui ideed ei tule, võtke kaart ja kohandage oma projektile
+
+Vaadake ka `4_Ideede_menuu.md` — ideed teie meeskonnatüübile koos eeltäidetud canvastega.
 
 | # | Idee | Kus see aitab | Mõõdetava väärtuse vihje |
 |---|---|---|---|

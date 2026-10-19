@@ -29,6 +29,6 @@ Ilma lähtetasemeta (praegune aeg) ROI-d ei ole — on ainult tunne.
 
 ## Valmis, kui
 
-- Iga idee (15 olemasolevat + teie uued) on hinnatud
+- Teie tööd puudutavad ideed (tabelist ja menüüst, ~6–8 tk) on hinnatud
 - Igal ideel on täidetud „Mõõdetav väärtus“
-- Rühm on valinud **top 3** ja põhjendab ühe lausega, miks just need
+- Meeskond on valinud **top 3** ja põhjendab ühe lausega, miks just need
