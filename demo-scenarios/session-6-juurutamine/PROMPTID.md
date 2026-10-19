@@ -49,12 +49,13 @@ Me otsustame lõpliku hinde ise — sinu hinne on arutelu alguspunkt, mitte otsu
 
 ---
 
-## Praktika 3 — Lõpuprojekti lähteülesanne
+## Praktika 3 — AI Lean Canvas
 
 ```
-Aita mul koostada lõpuprojekti lähteülesanne failis 3_Lahteulesanne_mall.md.
-Minu idee: <kleepige idee tabelist>.
-Küsi minult ükshaaval küsimusi malli 10 osa kohta — alusta probleemist ja lähtetasemest.
-Kui vastan ebamääraselt (nt „kiiremaks“), küsi numbrit. Lõpuks täida mall minu vastuste põhjal.
-Ära lisa midagi, mida ma ei öelnud — märgi puuduv osa „PUUDU“.
+Aita meie meeskonnal täita AI Lean Canvas (9 plokki: probleem, kasutajad, praegune lahendus ja
+lähtetase, AI-lahendus, andmed, väärtus, mõõdik ja „Valmis, kui“, kulud, riskid ja kontroll).
+Meie idee: <kleepige idee tabelist>.
+Küsi meilt ükshaaval küsimusi, alusta probleemist ja lähtetasemest. Kui vastame ebamääraselt
+(nt „kiiremaks“), küsi numbrit. Lõpuks täida canvas meie vastuste põhjal tabelina.
+Ära lisa midagi, mida me ei öelnud — märgi puuduv plokk „PUUDU“.
 ```
