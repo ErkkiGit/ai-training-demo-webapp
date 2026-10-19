@@ -52,10 +52,15 @@ Me otsustame lõpliku hinde ise — sinu hinne on arutelu alguspunkt, mitte otsu
 ## Praktika 3 — AI Lean Canvas
 
 ```
-Aita meie meeskonnal täita AI Lean Canvas (9 plokki: probleem, kasutajad, praegune lahendus ja
-lähtetase, AI-lahendus, andmed, väärtus, mõõdik ja „Valmis, kui“, kulud, riskid ja kontroll).
+Aita meie meeskonnal täita AI Lean Canvas. Struktuur:
+1) Probleemi kirjeldus: pealkiri, probleemi kirjeldus, praegune olukord (numbritega), kasutajad.
+2) Lahenduse visioon: lahenduse kirjeldus, oodatav kvantitatiivne mõju (enne → pärast),
+   seotud andmeallikad ja infosüsteemid.
+3) Vajaminevad ressursid: inimesed, tehnoloogia, rahaline panus.
+4) Lisaks: andmete tase (avalik / sisemine / klientide / saladus), „Valmis, kui“ ja peatamise
+   kriteerium, riskid ja inimese kontroll.
 Meie idee: <kleepige idee tabelist>.
-Küsi meilt ükshaaval küsimusi, alusta probleemist ja lähtetasemest. Kui vastame ebamääraselt
-(nt „kiiremaks“), küsi numbrit. Lõpuks täida canvas meie vastuste põhjal tabelina.
-Ära lisa midagi, mida me ei öelnud — märgi puuduv plokk „PUUDU“.
+Küsi meilt ükshaaval küsimusi, alusta probleemist ja praegusest olukorrast. Kui vastame
+ebamääraselt (nt „kiiremaks“), küsi numbrit. Lõpuks täida canvas meie vastuste põhjal tabelina.
+Ära lisa midagi, mida me ei öelnud — märgi puuduv lahter „PUUDU“.
 ```
