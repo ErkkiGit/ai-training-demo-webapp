@@ -11,6 +11,7 @@ et see õnnestus** — üheksa korda mõõda, üks kord lõika, nüüd terve tii
 | `2_Ideede_kaardid.md` | Praktika 2a — ideede jaht (üksi → AI-intervjuu → kolmekesi) | 30 min |
 | `2_Hindamise_mall.md` | Praktika 2b — ideede hindamine mõju × teostatavuse maatriksil (kolmekesi) | 35 min |
 | `3_AI_Lean_Canvas.md` | Praktika 3 — AI Lean Canvas (meeskonniti, 2–4 inimest; põhimall ideede tabelis) | 30 min |
+| `4_Ideede_menuu.md` | Ideede menüü 5 meeskonnatüübile + eeltäidetud canvas — kui oma ideed ei tule | — |
 | `PROMPTID.md` | Kõik promptid, samade pealkirjade all | — |
 
 Ideede tabel (sama, mida kasutasime Sessioon 3-s ja 5-s): link ja QR-kood on slaididel.
