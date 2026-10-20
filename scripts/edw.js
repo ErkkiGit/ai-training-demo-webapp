@@ -51,7 +51,7 @@ if (cmd === 'build') {
     catch (e) { console.log(`VIGA     ${f}: ${e.message}`); red += 1; continue; }
     const ok = rows.length === 0;
     if (!ok) red += 1;
-    const note = sabotage && ok ? '   <- ei kuku ka rikutud andmetel: kas see test üldse kontrollib midagi?' : '';
+    const note = sabotage && ok ? '   <- ei kuku läbi ka rikutud andmetel: kas see test üldse kontrollib midagi?' : '';
     console.log(`${ok ? 'ROHELINE' : 'PUNANE  '} ${f}${ok ? '' : ` (${rows.length} rida)`}${note}`);
   }
   console.log(`\n${files.length - red}/${files.length} rohelised`);

@@ -12,7 +12,7 @@ eeltäidetud canvast alguspunktina.
 |---|---|
 | LDM-i veeru kirjeldusest → 0-rea SQL-testid | Sessioon 5 rada B, projektide kaardistus |
 | Regressioonikomplekti optimeerimine, et see jookseks 1 tunniga | ideede tabel |
-| „Kas test üldse suudab kukkuda?“ — kontroll meelega rikutud andmetega | Sessioon 5 rada B |
+| „Kas test üldse suudab läbi kukkuda?“ — kontroll meelega rikutud andmetega | Sessioon 5 rada B |
 | Igahommikune kokkuvõte öise laadimise testidest | eelküsitlus, Sessioon 5 |
 
 **Eeltäidetud canvas: LDM → SQL-testid**
@@ -21,7 +21,7 @@ eeltäidetud canvast alguspunktina.
 - Lahendus: agent loeb LDM-i ja kirjutab 0-rea testi + vastupidise testi; testija vaatab üle ja kontrollib rikutud andmetega
 - Oodatav mõju: ___ → ___ min veeru kohta
 - Andmed: LDM (sisemine/klientide), testkeskkond — mitte LIVE-koopia
-- Risk: test, mis ei saa kukkuda → kontroll rikutud andmetega on kohustuslik
+- Risk: test, mis ei saa läbi kukkuda → kontroll rikutud andmetega on kohustuslik
 
 ---
 
@@ -40,7 +40,7 @@ eeltäidetud canvast alguspunktina.
 - Lahendus: SKILL.md tiimi reeglitega + Xray kirjelduse ja koodi võrdlus; inimene teeb lõpliku review
 - Oodatav mõju: review ___ → ___ min; leitud vigade arv enne merge'i
 - Andmed: testikood ja Xray (klientide tase → kliendi luba)
-- Risk: AI kiidab heaks testi, mis ei saa kukkuda → skill kontrollib seda eraldi
+- Risk: AI kiidab heaks testi, mis ei saa läbi kukkuda → skill kontrollib seda eraldi
 
 ---
 
