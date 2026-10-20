@@ -38,3 +38,11 @@
 - Kuidas teame, kes millist tööriista kasutab? ______
 - Kus on logid (nt äriplaani admin-vaade)? ______
 - Kuidas registreerime vahejuhtumid (vale andmetase, viga kliendini jõudnud)? ______
+
+## 7. Lahtised küsimused
+
+Siia lähevad AI „KÜSIMUS:“ read ja teie enda „?“ — kellelt vastus küsida ja millal.
+
+| Küsimus | Kellelt | Tähtaeg |
+|---|---|---|
+| | | |
