@@ -45,7 +45,10 @@ Vaadake ka `4_Ideede_menuu.md` — ideed teie meeskonnatüübile koos eeltäidet
 
 **Aeg ühe korra kohta × mitu korda (nädalas / kuus) × kes** — enne ja pärast.
 
-- ❌ „Test manageri vaimne tervis +30%“ — ei saa mõõta
+Mõõdik ei pea olema aeg või raha. Oluline on lähtetase (praegu), sihttase ja kuidas mõõdate.
+
+- ❌ „Test manageri vaimne tervis +30%“ — 30% millest? Kuidas mõõdate?
+- ✅ „Test manageri stress anonüümses küsitluses (1–5) 4 → 2,5 kvartaliga; ületunnid 10 → 4 h kuus“ — ka pehmet väärtust saab mõõta: rahulolu, stress, ületunnid, haiguspäevad (ainult koondandmetena)
 - ❌ „Kiirem testimine“ — kui palju? millest?
 - ✅ „Regressiooni jooks 3 h → 1 h, 5 korda nädalas = 10 h nädalas vähem ootamist“
 - ✅ „Testilugude kirjutamine 45 min → 15 min pileti kohta, ~20 piletit kuus = 10 h kuus“
