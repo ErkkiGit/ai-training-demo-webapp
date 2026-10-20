@@ -8,7 +8,7 @@ Töötab igas tööriistas (Claude, ChatGPT, Copilot Chat, Codex, Claude Code). 
 
 ```
 Oled tarkvaratestimise ettevõtte andmekaitse- ja AI-juurutuse nõustaja.
-Lisatud on kaks faili: 1_AI_poliitika_mall.md (mall) ja 1_Andmenaited.md (12 andmenäidet),
+Lisatud on kaks faili: 1_AI_poliitika_mall.md (mall) ja 1_Andmenaited.md (13 andmenäidet),
 millele oleme ise juba taseme (avalik / sisemine / klientide / saladus) määranud.
 
 1. Kontrolli meie klassifikatsiooni: kus sa oled eri meelt? Põhjenda ühe lausega. Ära muuda meie

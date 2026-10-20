@@ -1,4 +1,4 @@
-# Praktika 1 — 12 andmenäidet klassifitseerimiseks
+# Praktika 1 — 13 andmenäidet klassifitseerimiseks
 
 Klassifitseerige iga näide ühte neljast tasemest: **avalik · sisemine · klientide · saladus**.
 Kui ei ole kindel, kirjutage „?“ ja põhjus — see on küsimus poliitikasse.
@@ -17,6 +17,7 @@ Kui ei ole kindel, kirjutage „?“ ja põhjus — see on küsimus poliitikasse
 | 10 | Testkeskkonna kasutajanimi ja parool, API-võti | |
 | 11 | Teie enda kirjutatud bug report (ilma kliendi andmeteta) | |
 | 12 | Sünteetilised testandmed, mille AI genereeris väljamõeldud reeglite järgi | |
+| 13 | Kliendi päris logid pärast seda, kui AI abil kirjutatud skript (mida käivitasite ise) maskis neist e-postid, IP-d ja isikukoodid | |
 
 **NB:** sama tüüpi andmed võivad eri kliendi juures olla eri tasemel — see sõltub kliendilepingust.
 Poliitika peab ütlema, kust te seda teada saate.
