@@ -44,7 +44,7 @@ Allikad: [Claude Code routines](https://code.claude.com/docs/en/routines) ·
 |---|---|
 | Copilot code review | Automaatne PR-i ülevaatus `.github/copilot-instructions.md` järgi |
 | [claude-code-action](https://code.claude.com/docs/en/github-actions) / [openai/codex-action](https://developers.openai.com/codex/github-action) | Agent GitHub Actionsi sammuna: ülevaatus, parandus, triaaž |
-| [GitHub Agentic Workflows](https://github.github.com/gh-aw/) | Workflow Markdownis; nt CI Doctor (uurib kukkunud CI-d), Test Improver (lisab teste) |
+| [GitHub Agentic Workflows](https://github.github.com/gh-aw/) | Workflow Markdownis; nt CI Doctor (uurib läbikukkunud CI-d), Test Improver (lisab teste) |
 | Claude Code routine + GitHubi päästik | Jookseb `pull_request.opened` peale teie checklistiga |
 | Dependabot | Sõltuvuste uuenduste PR-id (ei ole AI) — agent võib need üle vaadata |
 

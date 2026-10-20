@@ -38,7 +38,7 @@ mille leidsite Sessioon 4-s käsitsi; (4) iga punase testi kohta oskate öelda: 
    (`PROMPTID.md` → Harjutus 1, samm 1). Ilma brauseritööriistata: kleepige stsenaarium ja lehe URL.
 2. **UI-testid (15 min)** — agent kirjutab S1, S2, S3 testideks ja käivitab need (samm 2).
 3. **API-testid (10 min)** — agent kirjutab kontrollnimekirja põhjal vähemalt 2 testi ja käivitab need (samm 3).
-4. **Kontrollige agenti (7 min)** — iga testi kohta: kas see saab kukkuda? Näide: muutke API testis ootus
+4. **Kontrollige agenti (7 min)** — iga testi kohta: kas see saab läbi kukkuda? Näide: muutke API testis ootus
    `403` → `404` (või UI testis „Booking Confirmed“ → „Booking Confirmedx“), käivitage — test peab minema
    punaseks. Siis taastage õige ootus (samm 4).
 5. **Salvestage (3 min)** — `git` haru `harjutus1-<nimi>` (vt `LOE_MIND.md` → Kuidas tulemust jagada).

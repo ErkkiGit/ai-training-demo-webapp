@@ -1,9 +1,9 @@
 # Harjutus 4 — Testid CI-sse + AI triaaž (12 min, paaris)
 
-**Eesmärk:** testid jooksevad automaatselt igal push'il ja AI aitab kukkunud jooksu kiiresti triaažida.
+**Eesmärk:** testid jooksevad automaatselt igal push'il ja AI aitab läbikukkunud jooksu kiiresti triaažida.
 **Sisend:** teie repo koopia, fail `4_CI_logi_naidis.txt`.
 **Valmis, kui:** (1) failis `.github/workflows/tests.yml` on töö, mis jooksutab `npm run test:stable`
-ja eraldi karantiinitöö flaky testidele; (2) näidislogi iga kukkunud testi kohta on tabelirida ja otsus,
+ja eraldi karantiinitöö flaky testidele; (2) näidislogi iga läbikukkunud testi kohta on tabelirida ja otsus,
 kas PR-i võib merge'ida.
 **Arutelus jagate:** workflow fail (või Actions vahekaart) + triaaži tabel.
 
