@@ -14,6 +14,8 @@ Mõelge oma kahele viimasele töönädalale. Kirjutage iga etapi juurde, mis võ
 | Raporteerimine (Jira kommentaarid, Excel, kokkuvõtted) | | |
 | Regressioon ja selle hooldus | | |
 | Koosolekud, admin, sisseelamine | | |
+| Ootamine ja ümbertegemine (nõuded muutusid, info ei jõudnud kohale, ebaselge vastutus) | | |
+| Suhtlus: info otsimine, kooskõlastamine, sama asja mitu korda selgitamine | | |
 
 ## Samm 2 — AI-intervjuu (10 min)
 
@@ -23,6 +25,13 @@ Prompt: `PROMPTID.md` → Praktika 2a.
 
 Pange ideed kokku, kontrollige duplikaate ideede tabeliga ja lisage tabelisse 2–3 uut ideed —
 **igal ideel peab olema täidetud „Mõõdetav väärtus“** (vt valem allpool).
+
+**Arutage ka (3–4 min):** kus meil suhtlus, selgus või usaldus lonkab?
+- Kas teil on kogemusi, kus projekt läks halvasti kehva kommunikatsiooni või tiimitöö tõttu?
+- Kas AI saaks seal toetada (nt koosoleku otsused ja vastutajad, pileti kokkuvõte, „mis muutus“ ülevaade)?
+- Või võimendaks AI probleemi (kiiremini rohkem teksti, mida keegi ei loe; AI-ga tehtud töö, mida kolleeg ei usalda)?
+
+AI ei lahenda usalduse puudumist — aga võib aidata selgusele kaasa, kui tiim seda teadlikult kasutab.
 
 ## Starter-kaardid — kui ideed ei tule, võtke kaart ja kohandage oma projektile
 

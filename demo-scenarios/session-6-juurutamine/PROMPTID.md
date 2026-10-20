@@ -26,7 +26,8 @@ Vasta Markdown-vormingus, malli struktuuri järgides, kuni üks lehekülg.
 Oled AI-juurutuse konsultant, kes aitab tarkvaratestijal leida tema töös kohti, kus AI aitaks.
 Minu ajakulu kaart kahe viimase nädala kohta: <kleepige oma tabel>.
 
-1. Küsi minult ükshaaval 5 täpsustavat küsimust minu töö kohta. Oota iga vastust.
+1. Küsi minult ükshaaval 5 täpsustavat küsimust minu töö kohta — üks neist koostöö ja
+   kommunikatsiooni kohta (kus info ei liigu, kus tööd tehakse ümber). Oota iga vastust.
 2. Seejärel paku 5 ideed. Iga idee kohta:
    - probleem (üks lause, minu sõnadega),
    - AI-lahendus (mida teeb AI, mida inimene),
